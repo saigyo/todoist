@@ -1,7 +1,22 @@
 <div class="card my-5">
   <div class="card-body">
     <table class="table table-bordered table-striped">
-      <tr>Todo Items go here</tr>
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">State</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of todoItems">
+        <td>{{ item.id }}</td>
+        <td>{{ item.title }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.state }}</td>
+      </tr>
+      </tbody>
     </table>
   </div>
 </div>
