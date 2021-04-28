@@ -13,12 +13,22 @@ java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
 	mavenCentral()
+	jcenter()
+}
+
+dependencyManagement {
+	imports {
+		mavenBom("io.crnk:crnk-bom:3.3.20200920055408")
+	}
 }
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-data-rest")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("io.crnk:crnk-setup-spring-boot2")
+	implementation("io.crnk:crnk-format-plain-json")
+	implementation("io.crnk:crnk-home")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
