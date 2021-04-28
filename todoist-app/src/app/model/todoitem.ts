@@ -1,8 +1,14 @@
-export class TodoItem {
-  id: string;
+import {Attribute, JsonApiModel, JsonApiModelConfig} from "angular2-jsonapi";
+
+@JsonApiModelConfig({
+  type: 'todoItems'
+})export class TodoItem extends JsonApiModel {
+  @Attribute()
   title: string;
+  @Attribute()
   description: string;
-  itemState: ItemState
+  @Attribute()
+  state: ItemState
 }
 
 export enum ItemState {
