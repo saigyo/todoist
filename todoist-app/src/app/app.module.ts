@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TodoitemsComponent } from './todoitems/todoitems.component';
+import {HttpClientModule} from "@angular/common/http";
+import {JsonApiModule} from "angular2-jsonapi";
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { TodoitemsComponent } from './todoitems/todoitems.component';
     TodoitemsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    JsonApiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
