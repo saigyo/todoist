@@ -1,6 +1,6 @@
 <div class="card my-5">
   <div class="card-body">
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped items">
       <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
@@ -10,7 +10,9 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let item of todoItems">
+      <tr *ngFor="let item of todoItems"
+          [class.selected]="item === selectedItem"
+          (click)="onSelect(item)">
         <td>{{ item.id }}</td>
         <td>{{ item.title }}</td>
         <td>{{ item.description }}</td>
@@ -20,3 +22,5 @@
     </table>
   </div>
 </div>
+
+<app-todoitem-detail [todoItem]="selectedItem"></app-todoitem-detail>

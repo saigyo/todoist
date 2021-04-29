@@ -1,0 +1,33 @@
+<div *ngIf="todoItem">
+  <div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+          <td>ID</td>
+          <td>{{todoItem.id}}</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><label for="todoItem-title">Title</label></td>
+          <td><input id="todoItem-title" [(ngModel)]="todoItem.title" placeholder="title"></td>
+        </tr>
+        <tr>
+          <td><label for="todoItem-description">Description</label></td>
+          <td><input id="todoItem-description" [(ngModel)]="todoItem.description" placeholder="description"></td>
+        </tr>
+        <tr>
+          <td><label for="todoItem-description">State</label></td>
+          <td>
+            <select [(ngModel)]="todoItem.state">
+              <option *ngFor="let itemState of itemStates"
+                      [value]="itemState">{{itemState2LabelMapping[itemState]}}</option>
+            </select>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

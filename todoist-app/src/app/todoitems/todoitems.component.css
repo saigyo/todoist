@@ -1,0 +1,12 @@
+.items tr.selected {
+  background-color: black;
+  color: white;
+}
+.items tr.selected:hover {
+  background-color: #505050;
+  color: white;
+}
+.items tr.selected:active {
+  background-color: black;
+  color: white;
+}

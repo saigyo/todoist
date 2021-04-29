@@ -11,6 +11,8 @@ export class TodoitemsComponent implements OnInit {
 
   todoItems: TodoItem[]
 
+  selectedItem: TodoItem
+
   constructor(
     private todoItemService : TodoitemService
   ) { }
@@ -20,5 +22,9 @@ export class TodoitemsComponent implements OnInit {
         this.todoItems = data
       }
     )
+  }
+
+  onSelect(todoItem: TodoItem) {
+    this.selectedItem = todoItem
   }
 }

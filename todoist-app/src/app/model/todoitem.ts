@@ -16,3 +16,9 @@ export enum ItemState {
   doing = "DOING",
   done = "DONE"
 }
+
+export const ItemState2LabelMapping: Record<ItemState, string> = {
+  [ItemState.todo]: "Todo",
+  [ItemState.doing]: "Doing",
+  [ItemState.done]: "Done",
+};
