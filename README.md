@@ -4,23 +4,21 @@ A simple Todo App with a Spring Boot backend and an Angular frontend.
 The backend exposes its persistent models through a JSON:API resource
 from a Spring Data repository backed by an in-memory H2 database.
 
-# Backend Service
-
-## Build
+# Build
 
 ```
 ./gradlew clean build
 ```
 
-## Run
+# Run
 
 ```
-./gradlew bootRun
+./gradlew :todoist-service:bootRun
 ```
 
 # Frontend
 
-See [todoist-app/README](todoist-app/README.md)
+See also [todoist-app/README](todoist-app/README.md)
 
 ## Tech Stack
 
