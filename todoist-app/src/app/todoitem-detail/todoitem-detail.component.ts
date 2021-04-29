@@ -17,4 +17,7 @@ export class TodoitemDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onChange() {
+    this.todoItem.save().subscribe()
+  }
 }

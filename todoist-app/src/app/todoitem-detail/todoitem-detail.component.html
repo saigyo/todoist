@@ -11,16 +11,16 @@
         <tbody>
         <tr>
           <td><label for="todoItem-title">Title</label></td>
-          <td><input id="todoItem-title" [(ngModel)]="todoItem.title" placeholder="title"></td>
+          <td><input id="todoItem-title" [(ngModel)]="todoItem.title" (change)="onChange()" placeholder="title"></td>
         </tr>
         <tr>
           <td><label for="todoItem-description">Description</label></td>
-          <td><input id="todoItem-description" [(ngModel)]="todoItem.description" placeholder="description"></td>
+          <td><input id="todoItem-description" [(ngModel)]="todoItem.description" (change)="onChange()" placeholder="description"></td>
         </tr>
         <tr>
           <td><label for="todoItem-description">State</label></td>
           <td>
-            <select [(ngModel)]="todoItem.state">
+            <select [(ngModel)]="todoItem.state" (change)="onChange()">
               <option *ngFor="let itemState of itemStates"
                       [value]="itemState">{{itemState2LabelMapping[itemState]}}</option>
             </select>
