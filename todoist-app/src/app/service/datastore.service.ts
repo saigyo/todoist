@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
 import {TodoItem} from "../model/todoitem";
 
 const config: DatastoreConfig = {
-  baseUrl: 'http://localhost:8080',
+  baseUrl: 'http://localhost:8080/api',
   models: {
     posts: TodoItem,
   }
