@@ -16,6 +16,8 @@ from a Spring Data repository backed by an in-memory H2 database.
 ./gradlew :todoist-service:bootRun
 ```
 
+Then open http://localhost:8080
+
 # Frontend
 
 See also [todoist-app/README](todoist-app/README.md)
