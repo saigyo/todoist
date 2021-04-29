@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/todoist-app"
+    schedule:
+      interval: "weekly"
+      time: "04:00"
+    open-pull-requests-limit: 5
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: weekly
+      time: "04:00"
+    open-pull-requests-limit: 5
