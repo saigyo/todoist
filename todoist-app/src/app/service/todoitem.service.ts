@@ -22,4 +22,8 @@ export class TodoitemService {
   public createNewItem(): Observable<TodoItem> {
     return this.datastore.createRecord(TodoItem, { state: ItemState.todo }).save();
   }
+
+  delete(id: string): Observable<object> {
+    return this.datastore.deleteRecord(TodoItem, id);
+  }
 }

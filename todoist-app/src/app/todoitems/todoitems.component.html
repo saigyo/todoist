@@ -10,6 +10,7 @@
         <th scope="col">Title</th>
         <th scope="col">Description</th>
         <th scope="col">State</th>
+        <th scope="col"></th>
       </tr>
       </thead>
       <tbody>
@@ -20,6 +21,11 @@
         <td>{{ item.title }}</td>
         <td>{{ item.description }}</td>
         <td>{{ item.state }}</td>
+        <td>
+          <div class="col-md-3">
+            <button class="btn btn-danger" (click)="delete(item)">X</button>
+          </div>
+        </td>
       </tr>
       </tbody>
     </table>

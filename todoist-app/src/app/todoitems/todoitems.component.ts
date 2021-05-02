@@ -34,4 +34,13 @@ export class TodoitemsComponent implements OnInit {
       this.selectedItem = newItem;
     });
   }
+
+  delete(item: TodoItem): void {
+    this.todoItemService.delete(item.id).subscribe(() => {
+      if (this.selectedItem === item) {
+        this.selectedItem = null;
+      }
+      this.todoItems.splice(this.todoItems.indexOf(item), 1);
+    });
+  }
 }
