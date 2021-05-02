@@ -27,4 +27,11 @@ export class TodoitemsComponent implements OnInit {
   onSelect(todoItem: TodoItem): void {
     this.selectedItem = todoItem;
   }
+
+  addNewItem(): void {
+    this.todoItemService.createNewItem().subscribe(newItem => {
+      this.todoItems.push(newItem);
+      this.selectedItem = newItem;
+    });
+  }
 }
