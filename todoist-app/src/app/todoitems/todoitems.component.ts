@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TodoitemService} from '../service/todoitem.service';
 import {TodoItem} from '../model/todoitem';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-todoitems',
@@ -8,6 +9,7 @@ import {TodoItem} from '../model/todoitem';
   styleUrls: ['./todoitems.component.css']
 })
 export class TodoitemsComponent implements OnInit {
+  faTrash = faTrashAlt;
 
   todoItems: TodoItem[];
 

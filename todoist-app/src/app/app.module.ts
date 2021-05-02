@@ -8,6 +8,7 @@ import { TodoitemDetailComponent } from './todoitem-detail/todoitem-detail.compo
 import {HttpClientModule} from '@angular/common/http';
 import {JsonApiModule} from 'angular2-jsonapi';
 import {FormsModule} from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     HttpClientModule,
     JsonApiModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [TodoitemService],
   bootstrap: [AppComponent]

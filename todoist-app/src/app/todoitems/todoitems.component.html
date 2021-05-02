@@ -22,9 +22,9 @@
         <td>{{ item.description }}</td>
         <td>{{ item.state }}</td>
         <td>
-          <div class="col-md-3">
-            <button class="btn btn-danger" (click)="delete(item)">X</button>
-          </div>
+            <button type="button" class="btn btn-default" (click)="delete(item)" aria-label="Delete">
+              <fa-icon [icon]="faTrash" aria-hidden="true"></fa-icon>
+            </button>
         </td>
       </tr>
       </tbody>
