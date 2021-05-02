@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 
 import { JsonApiDatastoreConfig, JsonApiDatastore, DatastoreConfig } from 'angular2-jsonapi';
-import {HttpClient} from "@angular/common/http";
-import {TodoItem} from "../model/todoitem";
+import {HttpClient} from '@angular/common/http';
+import {TodoItem} from '../model/todoitem';
 
 const config: DatastoreConfig = {
   baseUrl: 'http://localhost:8080/api',
   models: {
     posts: TodoItem,
   }
-}
+};
 
 @Injectable({
   providedIn: 'root'

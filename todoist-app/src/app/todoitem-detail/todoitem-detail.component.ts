@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ItemState, ItemState2LabelMapping, TodoItem} from "../model/todoitem";
+import {ItemState, ItemState2LabelMapping, TodoItem} from '../model/todoitem';
 
 @Component({
   selector: 'app-todoitem-detail',
@@ -7,17 +7,17 @@ import {ItemState, ItemState2LabelMapping, TodoItem} from "../model/todoitem";
   styleUrls: ['./todoitem-detail.component.css']
 })
 export class TodoitemDetailComponent implements OnInit {
-  @Input() todoItem? : TodoItem
+  @Input() todoItem?: TodoItem;
 
   public itemState2LabelMapping = ItemState2LabelMapping;
-  public itemStates = Object.values(ItemState)
+  public itemStates = Object.values(ItemState);
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onChange() {
-    this.todoItem.save().subscribe()
+  onChange(): void {
+    this.todoItem.save().subscribe();
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {TodoitemService} from "../service/todoitem.service";
-import {TodoItem} from "../model/todoitem";
+import {TodoitemService} from '../service/todoitem.service';
+import {TodoItem} from '../model/todoitem';
 
 @Component({
   selector: 'app-todoitems',
@@ -9,22 +9,22 @@ import {TodoItem} from "../model/todoitem";
 })
 export class TodoitemsComponent implements OnInit {
 
-  todoItems: TodoItem[]
+  todoItems: TodoItem[];
 
-  selectedItem: TodoItem
+  selectedItem: TodoItem;
 
   constructor(
-    private todoItemService : TodoitemService
+    private todoItemService: TodoitemService
   ) { }
 
   ngOnInit(): void {
     this.todoItemService.findAll().subscribe(data => {
-        this.todoItems = data
+        this.todoItems = data;
       }
-    )
+    );
   }
 
-  onSelect(todoItem: TodoItem) {
-    this.selectedItem = todoItem
+  onSelect(todoItem: TodoItem): void {
+    this.selectedItem = todoItem;
   }
 }
