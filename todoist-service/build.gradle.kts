@@ -18,7 +18,7 @@ repositories {
 
 dependencyManagement {
 	imports {
-		mavenBom("io.crnk:crnk-bom:3.3.20200920055408")
+		mavenBom("io.crnk:crnk-bom:3.4.20210509072026")
 	}
 }
 
